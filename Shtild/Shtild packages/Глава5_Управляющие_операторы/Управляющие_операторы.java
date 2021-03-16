@@ -573,16 +573,26 @@ class WhileTrue {
 
 class for_foreach {
     public static void main(String[] args) {
-        int nums[] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8, 9, 10, 11 };
+        int nums[] = { 3 , 8 , 32 , 12 , 5 , 6 , 7 , 8, 9, 10, 11 };
         int sum = 0;
         int i;
         //Присвоение значений массива через цикл
-        for(i = 0; i < 11; i++){sum += nums[i];
-            System.out.println("текущий порядковый номер массива nums[" + i + "]" + " значение числа массива nums[i] i = " + sum + "\n");
+        for(i = 0; i < 11; i++){
+            sum += nums[i];
+            System.out.println("текущий порядковый номер массива nums[" + i + "]" +
+                    " значение числа массива nums[i] i = " + sum + "\n");
         }
         {
-            System.out.println("текущий порядковый номер массива nums[] номер = " + i + " значение числа массива nums[i] i = " + sum);
+            System.out.println("текущий порядковый номер массива nums[] номер = " +
+                    i + " значение числа массива nums[i] i = " + sum);
         }
+        System.out.println(nums[1]);
+        System.out.println(nums[2]);
+        System.out.println(nums[3]);
+        System.out.println(nums[4]);
+        System.out.println(nums[5]);
+        System.out.println(nums[11]);
+//        System.out.println(nums[61]); Exception ArrayIndexOutBoundsException
     }
 }
 

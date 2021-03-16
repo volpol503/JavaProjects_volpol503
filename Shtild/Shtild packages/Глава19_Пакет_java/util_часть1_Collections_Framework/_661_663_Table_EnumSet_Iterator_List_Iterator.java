@@ -1,0 +1,4 @@
+package Глава19_Пакет_java.util_часть1_Collections_Framework;
+
+public class _661_663_Table_EnumSet_Iterator_List_Iterator {
+}
