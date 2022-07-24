@@ -1,0 +1,95 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.google.android.gms.example.bannerexample"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml
+10
+11    <!-- Include required permissions for Google Mobile Ads to run -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:23:5-67
+12-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:23:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:24:5-79
+13-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:24:22-76
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\8076767b0e108b8b72c7d1c5702fe717\jetified-play-services-measurement-sdk-api-17.1.0\AndroidManifest.xml:25:5-68
+14-->[com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\8076767b0e108b8b72c7d1c5702fe717\jetified-play-services-measurement-sdk-api-17.1.0\AndroidManifest.xml:25:22-65
+15
+16    <application
+16-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:5:5-25:19
+17        android:allowBackup="true"
+17-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.0.1] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\74f2373dfbebf2cc35b62901ca2cc973\core-1.0.1\AndroidManifest.xml:22:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:7:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:8:9-41
+22        android:testOnly="true"
+23        android:theme="@style/AppTheme" >
+23-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:9:9-40
+24
+25        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+26        <meta-data
+26-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:12:9-14:69
+27            android:name="com.google.android.gms.ads.APPLICATION_ID"
+27-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:13:13-69
+28            android:value="ca-app-pub-3940256099942544~3347511713" />
+28-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:14:13-67
+29
+30        <activity
+30-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:16:9-24:20
+31            android:name="com.google.android.gms.example.bannerexample.MyActivity"
+31-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:17:13-39
+32            android:label="@string/app_name" >
+32-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:18:13-45
+33            <intent-filter>
+33-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:19:13-23:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:20:17-69
+34-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:20:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:22:17-77
+36-->C:\Users\volpo\Desktop\AndroidStudio_WorkSpace\googleads-mobile-android-examples-master\java\admob\BannerExample\app\src\main\AndroidManifest.xml:22:27-74
+37            </intent-filter>
+38        </activity>
+39        <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+40        <activity
+40-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:29:9-33:64
+41            android:name="com.google.android.gms.ads.AdActivity"
+41-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:30:13-65
+42            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+42-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:31:13-122
+43            android:exported="false"
+43-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:32:13-37
+44            android:theme="@android:style/Theme.Translucent" />
+44-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:33:13-61
+45
+46        <provider
+46-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:35:9-39:39
+47            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+47-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:36:13-76
+48            android:authorities="com.google.android.gms.example.bannerexample.mobileadsinitprovider"
+48-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:37:13-73
+49            android:exported="false"
+49-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:38:13-37
+50            android:initOrder="100" />
+50-->[com.google.android.gms:play-services-ads-lite:19.3.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\30bf3d0be53d01f08691ff90253a201e\jetified-play-services-ads-lite-19.3.0\AndroidManifest.xml:39:13-36
+51
+52        <meta-data
+52-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\5b6a0e6d47fb7aa1fa9699b22fa16570\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+53            android:name="com.google.android.gms.version"
+53-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\5b6a0e6d47fb7aa1fa9699b22fa16570\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+54            android:value="@integer/google_play_services_version" />
+54-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\volpo\.gradle\caches\transforms-2\files-2.1\5b6a0e6d47fb7aa1fa9699b22fa16570\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+55    </application>
+56
+57</manifest>

@@ -1,0 +1,4 @@
+package Глава33_Введение_в_меню_Swing;
+
+public class _1240_1263_Table_MenuSwing_JavaAwtInputEvent_KeyEvent {
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "532182238979",
+    "firebase_url": "https://admob-tutorial-10d71.firebaseio.com",
+    "project_id": "admob-tutorial-10d71",
+    "storage_bucket": "admob-tutorial-10d71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532182238979:android:b718bbef0c81e699b08b36",
+        "android_client_info": {
+          "package_name": "com.volstudio.admob_tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532182238979-kkhi1q5qmq5c1dtke5dc8p7o0ood3b5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALUZiC2En-lcVl2azBMalBukuh5e7PnXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532182238979-kkhi1q5qmq5c1dtke5dc8p7o0ood3b5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

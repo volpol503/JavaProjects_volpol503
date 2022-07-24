@@ -1,0 +1,4 @@
+package Глава20_Пакет_java.util_часть2_прочие_служебные_классы;
+
+public class _783_792_Table_ResourceBundle_JavaUtil_JavaUtilFunction {
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "10188354452",
+    "firebase_url": "https://adsapp-59e4e.firebaseio.com",
+    "project_id": "adsapp-59e4e",
+    "storage_bucket": "adsapp-59e4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10188354452:android:d3209afdc1bdd985199581",
+        "android_client_info": {
+          "package_name": "com.volstudio.adsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10188354452-1voiv20eg1c0eeacvvahm9gov087tsmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMmqCMo48Lzta-ETQNRCVUOottXqxSAds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10188354452-1voiv20eg1c0eeacvvahm9gov087tsmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #6897bb;}
+.s3 { color: #cc7832;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">android {</span>
+    <span class="s0">buildToolsVersion </span><span class="s1">&quot;30.0.1&quot;</span>
+    <span class="s0">compileSdkVersion </span><span class="s2">30</span>
+    <span class="s0">sourceSets {</span>
+        <span class="s0">main {</span>
+            <span class="s0">manifest.srcFile </span><span class="s1">'AndroidManifest.xml'</span>
+            <span class="s0">java.srcDirs = [</span><span class="s1">'src'</span><span class="s0">]</span>
+            <span class="s0">aidl.srcDirs = [</span><span class="s1">'src'</span><span class="s0">]</span>
+            <span class="s0">renderscript.srcDirs = [</span><span class="s1">'src'</span><span class="s0">]</span>
+            <span class="s0">res.srcDirs = [</span><span class="s1">'res'</span><span class="s0">]</span>
+            <span class="s0">assets.srcDirs = [</span><span class="s1">'assets'</span><span class="s0">]</span>
+            <span class="s0">jniLibs.srcDirs = [</span><span class="s1">'libs'</span><span class="s0">]</span>
+        <span class="s0">}</span>
+
+    <span class="s0">}</span>
+    <span class="s0">packagingOptions {</span>
+        <span class="s0">exclude </span><span class="s1">'META-INF/robovm/ios/robovm.xml'</span>
+    <span class="s0">}</span>
+    <span class="s0">defaultConfig {</span>
+        <span class="s0">applicationId </span><span class="s1">&quot;com.mygdx.game&quot;</span>
+        <span class="s0">minSdkVersion </span><span class="s2">14</span>
+        <span class="s0">targetSdkVersion </span><span class="s2">30</span>
+        <span class="s0">versionCode </span><span class="s2">1</span>
+        <span class="s0">versionName </span><span class="s1">&quot;1.0&quot;</span>
+    <span class="s0">}</span>
+    <span class="s0">buildTypes {</span>
+        <span class="s0">release {</span>
+            <span class="s0">minifyEnabled </span><span class="s3">false</span>
+            <span class="s0">proguardFiles getDefaultProguardFile(</span><span class="s1">'proguard-android.txt'</span><span class="s0">), </span><span class="s1">'proguard-rules.pro'</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+
+<span class="s4">// called every time gradle gets executed, takes the native dependencies of</span>
+<span class="s4">// the natives configuration, and extracts them to the proper libs/ folders</span>
+<span class="s4">// so they get packed with the APK.</span>
+<span class="s0">task copyAndroidNatives {</span>
+    <span class="s0">doFirst {</span>
+        <span class="s0">file(</span><span class="s1">&quot;libs/armeabi/&quot;</span><span class="s0">).mkdirs()</span>
+        <span class="s0">file(</span><span class="s1">&quot;libs/armeabi-v7a/&quot;</span><span class="s0">).mkdirs()</span>
+        <span class="s0">file(</span><span class="s1">&quot;libs/arm64-v8a/&quot;</span><span class="s0">).mkdirs()</span>
+        <span class="s0">file(</span><span class="s1">&quot;libs/x86_64/&quot;</span><span class="s0">).mkdirs()</span>
+        <span class="s0">file(</span><span class="s1">&quot;libs/x86/&quot;</span><span class="s0">).mkdirs()</span>
+
+        <span class="s0">configurations.natives.files.each { jar -&gt;</span>
+            <span class="s3">def </span><span class="s0">outputDir = </span><span class="s3">null</span>
+            <span class="s3">if </span><span class="s0">(jar.name.endsWith(</span><span class="s1">&quot;natives-arm64-v8a.jar&quot;</span><span class="s0">)) outputDir = file(</span><span class="s1">&quot;libs/arm64-v8a&quot;</span><span class="s0">)</span>
+            <span class="s3">if </span><span class="s0">(jar.name.endsWith(</span><span class="s1">&quot;natives-armeabi-v7a.jar&quot;</span><span class="s0">)) outputDir = file(</span><span class="s1">&quot;libs/armeabi-v7a&quot;</span><span class="s0">)</span>
+            <span class="s3">if</span><span class="s0">(jar.name.endsWith(</span><span class="s1">&quot;natives-armeabi.jar&quot;</span><span class="s0">)) outputDir = file(</span><span class="s1">&quot;libs/armeabi&quot;</span><span class="s0">)</span>
+            <span class="s3">if</span><span class="s0">(jar.name.endsWith(</span><span class="s1">&quot;natives-x86_64.jar&quot;</span><span class="s0">)) outputDir = file(</span><span class="s1">&quot;libs/x86_64&quot;</span><span class="s0">)</span>
+            <span class="s3">if</span><span class="s0">(jar.name.endsWith(</span><span class="s1">&quot;natives-x86.jar&quot;</span><span class="s0">)) outputDir = file(</span><span class="s1">&quot;libs/x86&quot;</span><span class="s0">)</span>
+            <span class="s3">if</span><span class="s0">(outputDir != </span><span class="s3">null</span><span class="s0">) {</span>
+                <span class="s0">copy {</span>
+                    <span class="s0">from zipTree(jar)</span>
+                    <span class="s0">into outputDir</span>
+                    <span class="s0">include </span><span class="s1">&quot;*.so&quot;</span>
+                <span class="s0">}</span>
+            <span class="s0">}</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s0">tasks.whenTaskAdded { packageTask -&gt;</span>
+    <span class="s3">if </span><span class="s0">(packageTask.name.contains(</span><span class="s1">&quot;package&quot;</span><span class="s0">)) {</span>
+        <span class="s0">packageTask.dependsOn </span><span class="s1">'copyAndroidNatives'</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s0">task run(type: Exec) {</span>
+    <span class="s3">def </span><span class="s0">path</span>
+    <span class="s3">def </span><span class="s0">localProperties = project.file(</span><span class="s1">&quot;../local.properties&quot;</span><span class="s0">)</span>
+    <span class="s3">if </span><span class="s0">(localProperties.exists()) {</span>
+        <span class="s0">Properties properties = </span><span class="s3">new </span><span class="s0">Properties()</span>
+        <span class="s0">localProperties.withInputStream { instr -&gt;</span>
+            <span class="s0">properties.load(instr)</span>
+        <span class="s0">}</span>
+        <span class="s3">def </span><span class="s0">sdkDir = properties.getProperty(</span><span class="s1">'sdk.dir'</span><span class="s0">)</span>
+        <span class="s3">if </span><span class="s0">(sdkDir) {</span>
+            <span class="s0">path = sdkDir</span>
+        <span class="s0">} </span><span class="s3">else </span><span class="s0">{</span>
+            <span class="s0">path = </span><span class="s1">&quot;</span><span class="s0">$System.env.ANDROID_HOME</span><span class="s1">&quot;</span>
+        <span class="s0">}</span>
+    <span class="s0">} </span><span class="s3">else </span><span class="s0">{</span>
+        <span class="s0">path = </span><span class="s1">&quot;</span><span class="s0">$System.env.ANDROID_HOME</span><span class="s1">&quot;</span>
+    <span class="s0">}</span>
+
+    <span class="s3">def </span><span class="s0">adb = path + </span><span class="s1">&quot;/platform-tools/adb&quot;</span>
+    <span class="s0">commandLine </span><span class="s1">&quot;</span><span class="s0">$adb</span><span class="s1">&quot;</span><span class="s0">, </span><span class="s1">'shell'</span><span class="s0">, </span><span class="s1">'am'</span><span class="s0">, </span><span class="s1">'start'</span><span class="s0">, </span><span class="s1">'-n'</span><span class="s0">, </span><span class="s1">'com.mygdx.game/com.mygdx.game.AndroidLauncher'</span>
+<span class="s0">}</span>
+
+<span class="s0">eclipse.project.name = appName + </span><span class="s1">&quot;-android&quot;</span>
+</pre>
+</body>
+</html>
